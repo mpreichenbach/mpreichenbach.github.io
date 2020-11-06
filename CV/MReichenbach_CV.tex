@@ -1,0 +1,266 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage[pdftex]{hyperref}
+\usepackage{etaremune}
+\usepackage{xcolor}
+\usepackage[sorting=ydnt, style=ieee]{biblatex}
+\addbibresource{papers.bib}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=mygreylink
+}
+\urlstyle{same}
+\definecolor{mygrey}{gray}{0.75}
+\definecolor{mygreylink}{gray}{.30}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+\newcounter{entrycount}
+\AtDataInput{\stepcounter{entrycount}}
+\DeclareFieldFormat{labelnumber}{\mkrevbibnum{#1}}
+\newcommand{\mkrevbibnum}[1]{\number\numexpr\value{entrycount}+1-#1}
+
+\begin{document}
+
+\thispagestyle{empty}
+\newcommand{\mywebheader}{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+	\textbf{\href{}{\LARGE Matt Reichenbach}} &\href{mailto:matt.reichenbach@huskers.unl.edu}{\texttt{matt.reichenbach@huskers.unl.edu}}\\
+    {\footnotesize \texttt{Department of Mathematics}} & \texttt{(303) 502-6191}\\
+	{\footnotesize \texttt{University of Nebraska-Lincoln}} & \url{http://www.math.unl.edu/~mreichenbach2/}\\
+	{\footnotesize \texttt{203 Avery Hall}}\\
+	{\footnotesize \texttt{Lincoln, NE 68588-0130}}  \\
+	\end{tabular*}
+\\
+\vspace{0.1in}}
+
+\mywebheader
+
+\resheading{Research Interests}
+\begin{itemize}
+	\resitem{\textbf{General:} Combining mathematical and computational tools to solve challenging, real-world problems.}
+	
+	\resitem{\textbf{Earth Sciences:} Machine learning applied to remote sensing data (for example, to perform land-cover classification or to remove speckle from synthetic aperture radar)}
+	
+	\resitem{\textbf{Mathematics:} Applied functional analysis, mathematical modeling, numerical analysis, optimization, and dynamical systems.}
+	
+%	\resitem{\textbf{Biology:} Mathematical modeling,  especially density-dependent (\textit{non-linear}) processes such as cannibalism and somatic growth.}
+	
+\end{itemize}
+
+\resheading{Education}
+	\begin{itemize}
+		\item
+			\ressubheading{University of Nebraska-Lincoln}{Lincoln, NE}{Ph.D. in Mathematics (GPA: 3.8)}{Dec. 2020 (expected)}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{Dissertation: \emph{Spectral Properties of a Non-compact Operator in Ecology}}
+					\resitem{Advised by Dr. Richard Rebarber and Dr. Brigitte Tenhumberg}
+				\end{itemize}}
+		\item
+		    	\ressubheading{University of Nebraska-Lincoln}{Lincoln, NE}{M.S. in Mathematics}{May 2017}
+		\item
+			\ressubheading{University of Colorado Boulder}{Boulder, CO}{Post-Baccalaureate Teacher Licensure in Secondary Mathematics}{Dec. 2013}
+		\item
+			\ressubheading{University of Colorado Boulder}{Boulder, CO}{B.A. in Mathematics (GPA: 3.86)}{May 2012}
+			
+	\end{itemize}
+
+\resheading{Skills}
+	\begin{description}
+        \item[Python:] { \footnotesize Developed convolutional neural networks using \textbf{Keras} and  the \textbf{Tensorflow} backend, and processed satellite imagery using the \textbf{NumPy}, \textbf{SciPy}, \textbf{OpenCV}, \textbf{GDAL}, and \textbf{Rasterio} libraries as an NSF Intern at the Geospatial Research Laboratory.}
+        
+        \item[R:] { \footnotesize Analyzed publicy available data for a fish (\emph{esox lucius}) population for my Ph.D. dissertation. Implemented a nonlinear model incorporating density-dependent somatic growth, and plotted results using the \textbf{ggplot2} package.}
+        	
+		\item[Additional Languages:] {\footnotesize MATLAB, \LaTeX.}
+		
+		\item[Applications:]{\footnotesize QGIS, Anaconda, Microsoft Office, Google Docs.}
+		
+        \item[Operating Systems:] {\footnotesize Windows, Linux  (Ubuntu), MAC OS}.
+        
+        \item[Soft Skills:] {\footnotesize Motivated self-starter, effective communicator, productive independently and on a team.}
+	\end{description}
+
+\resheading{Selected Employment}
+	\begin{itemize}
+				\item
+		\ressubheading{USACE - Geospatial Research Laboratory}{Alexandria, VA}{NSF Mathematical Sciences Graduate Intern}{Jun. 2020 -- Aug. 2020}
+		{\footnotesize
+			\begin{itemize}
+				\resitem{Developed denoising tools for the Enhanced Terrain Processing project}
+				\resitem{Trained convolutional neural networks on synthetic data using Keras \\ and Tensorflow, and applied them to SAR imagery}
+				\resitem{Acted as the technical lead, and worked with minimal oversight from mentors}
+				\resitem{Presented results at seminars to technical and non-technical audiences}
+		\end{itemize}}
+	
+		\item
+			\ressubheading{University of Nebraska-Lincoln}{Lincoln, NE}{Graduate Teaching Assistant}{Aug. 2015 -- Present}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{Taught courses as the instructor-of-record, directed recitation \\ sessions, and tutored in the Mathematics Resource Center}
+				\end{itemize}}
+
+        \item
+			\ressubheading{Center for Science, Mathematics \& Computer Education}{Lincoln, NE}{Instructor for MATH 806T: Number Theory and Cryptography}{Jul. 2019}
+				{\footnotesize
+				\begin{itemize}
+				    \resitem{Co-taught this Master's-level course for in-service secondary teachers}
+				\end{itemize}
+				}
+%        		\item
+%			\begin{samepage}
+%			\ressubheading{\href{https://cty.jhu.edu/}{Center for Talented Youth}}{Santa Cruz, CA}{Mathematics of Money Instructor}{June 2017 -- August 2017}
+%				{\footnotesize
+%				\begin{itemize}
+%				    \resitem{Taught this course for an international group of  middle- and high-school students.}
+%				\end{itemize}
+%				}
+%				\end{samepage}
+		\item 
+		\begin{samepage}
+			\ressubheading{Daewoo Elementary School}{Geoje-si, Republic of Korea}{Head Elementary English Teacher}{Feb. 2014 -- Feb. 2015}
+				{\footnotesize
+				\begin{itemize}
+				    \resitem{Taught four English lessons daily to $1^{\text{th}}$ through $6^{\text{th}}$-grade students}
+				    \resitem{Organized English-language initiatives and acted as the liaison between  English \\ teachers and school administrators}
+				\end{itemize}
+				}
+		\end{samepage}
+%        		\item
+%			\ressubheading{\href{https://www.colorado.edu/cuub/}{CU Upward Bound Summer Program}}{Boulder, CO}{Geometry \& Calculus Instructor}{June 2013 -- July 2013}
+%				{\footnotesize
+%				\begin{itemize}
+%				    \resitem{Taught these courses to Native American high-school students from reservations \\ around the United States.}
+%				\end{itemize}
+%				}
+        		\item
+			\ressubheading{Laboratory for Atmospheric and Space Physics}{Boulder, CO}{Student Procurement Assistant VI}{Mar. 2010 -- May 2013}
+				{\footnotesize
+				\begin{itemize}
+				    \resitem{Maintained parts lists for NASA-funded projects, including instruments \\on the GOES-R, MAVEN, and TSIS satellites}
+				\end{itemize}
+				}
+%        		\item
+%			\ressubheading{\href{https://www.colorado.edu/cuub/}{CU Upward Bound Summer Program}}{Boulder, CO}{Instructional Assistant}{June 2012 -- July 2012}
+%				{\footnotesize
+%				\begin{itemize}
+%				    \resitem{Assisted the instructor of the Geometry and Calculus courses.}
+%				\end{itemize}
+%				}
+%        		\item
+%			\ressubheading{\href{https://www.colorado.edu/cuub/}{CU Upward Bound Summer Program}}{Boulder, CO}{Instructional Assistant}{June 2010 -- July 2010}
+%				{\footnotesize
+%				\begin{itemize}
+%				    \resitem{Assisted the instructor of the Geometry and Algebra courses.}
+%				\end{itemize}
+%				}
+	\end{itemize}
+
+\resheading{Publications}
+
+\nocite{*}
+\printbibliography[heading=none]
+
+\resheading{Awards}
+\begin{itemize}
+	\item
+	\ressubheading{Linda Bors Fellowship}{UNL Math Dept.}{Awarded to three graduate students annually for excellence in research}{Fall 2018}
+	\item
+	\ressubheading{Steven Hataaja Award}{UNL Math Dept.}{Awarded for excellent exposition by a graduate student}{Spring 2018}
+	\item
+	\ressubheading{Robert Noyce Teacher Scholarship}{CU Boulder Dept. of Education}{NSF-funded merit scholarship}{Spring 2013 \& Fall 2013}
+	\item
+	\ressubheading{Dean's List}{CU Boulder}{Awarded to students with semester GPA greater than 3.75}{Spring 2010, Sp. 2013, \& Fall 2013}
+\end{itemize}
+	
+\resheading{Invited Presentations}
+	\begin{etaremune}
+		\item
+		\ressubheading{Math Club (remote), University of Nebraska-Kearney}{Kearney, NE}{``Modeling Ecological Populations" (50 mins)}{Oct. 2020}
+		\item
+		\ressubheading{Final Presentation (remote), Geospatial Research Laboratory}{Alexandria, VA}{``Denoising Synthetic Aperture Radar Using Convolutional Neural Networks"}{Aug. 2020}
+		\item
+		\ressubheading{STAMP Meeting (remote), Geospatial Research Laboratory}{Alexandria, VA}{``Integral Projection Models in Mathematical Biology" (50 min.)}{Jun. 2020}
+		\item
+		\ressubheading{Math Department Colloquium, Creighton University}{Omaha, NE}{``Integral Projection Models in Mathematical Biology'' (50 min.)}{Dec. 2019}
+		\item
+		\ressubheading{Augustana University Math Club}{Sioux Falls, SD}{``Population Models in Mathematical Biology" (50 min.)}{Nov. 2018}
+		\item
+		\ressubheading{Colorado Council of Teachers of Mathematics Annual Conference}{Denver, CO}{``The Impact of Inquiry-Based Teaching in Two High School Math Classrooms''}{Oct. 2013}
+	\end{etaremune}
+
+\resheading{UNL Math Department Seminar Presentations}
+	\begin{etaremune}
+		\item
+		\ressubheading{Graduate Student Seminar (remote)}{Lincoln, NE}{``What Can Math Say About Conspiracy Theories?" (50 min.)}{Oct. 2020}
+		\item
+		\ressubheading{Math Bio Seminar}{}{``Asymptotic Convergence to a Stable Stage Distribution" (50 min.)}{Feb. 2020}
+		\item
+		\ressubheading{Graduate Student Seminar}{}{``Conway \& Kochen's Free Will Theorem" (50 min.)}{Oct. 2019}
+		\item
+		\ressubheading{Math Bio Seminar}{}{``A Positive Eigenvalue for a New Integral Projection Model" (50 min.)}{Oct. 2019}
+		\item
+		\ressubheading{SPiDERS Graduate Seminar}{}{``Compactness Criteria in Infinite-Dimensional Spaces I, II, \& III" (50 min.)}{Feb. 2019}
+		\item
+		\ressubheading{Graduate Student Seminar}{}{``Learnability Can be Undecidable" (50 min.)}{Jan. 2019}
+		\item
+		\ressubheading{MathBio Seminar}{}{``Cannibalism \& Stunting in an IPM for Fish" (50 min.)}{Sep. 2018}
+		\item
+		\ressubheading{Graduate Student Seminar}{}{``Continuous-Time Population Models" (50 min.)}{Sep. 2017}
+		\item
+		\ressubheading{Graduate Student Seminar}{}{``An Exploration of the Calculus of Variations" (50 min.)}{Nov. 2016 }
+	\end{etaremune}
+
+\begin{samepage}	
+\resheading{Service and Involvement}
+	\begin{itemize}
+		\item
+			\ressubheading{Chapter President}{Sep. 2019 to Sep. 2020}{UNL Graduate Chapter of the American Mathematical Society}{}
+		\item 
+			\ressubheading{Tutor for Native American high-school students}{Aug. 2019 to Mar. 2020}{Lincoln Public Schools}{}
+		\item
+			\ressubheading{Project mentor}{Aug. 2019 to May 2020}{UNL Math Dep. Directed Reading Program}{}
+		\item
+			\ressubheading{STAAR Seminar Co-organizer}{Aug. 2019 to Aug. 2020}{University of Nebraska-Lincoln Math Dept.}{}
+		\item
+			\ressubheading{Volunteer}{Jan. 2017 to Jan. 2020}{National Conference for Undergraduate Women in Mathematics}{}
+		\item
+			\ressubheading{Mentor to First-Year Graduate Students}{Aug. 2018 to May 2020}{University of Nebraska-Lincoln Math Dept.}{}
+		\item
+			\ressubheading{Representative to Graduate Student Advisory Board}{May 2016 to May 2018}{University of Nebraska-Lincoln Math Dept.}{}
+		\item
+			\ressubheading{UNL Math Day Volunteer}{Nov. 2015 to Dec. 2020}{University of Nebraska-Lincoln Math Dept.}{}
+		
+	\end{itemize}			
+\end{samepage}
+			
+%\resheading{References and Contacts}
+%
+%\vspace{0.2cm}
+%Available upon request.
+\end{document}
